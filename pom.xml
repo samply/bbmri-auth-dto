@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.samply</groupId>
+    <artifactId>parent</artifactId>
+    <version>11.1.0</version>
+  </parent>
+
+  <artifactId>bbmri-auth-dto</artifactId>
+  <version>2.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>BBMRI Authentication Data Transfer Objects</name>
+  <description>The data transfer objects and some helper classes used in the Perun OpenID Connect
+    flow
+  </description>
+  <url>https://github.com/samply/bbmri-auth-dto</url>
+  <organization>
+    <name>Samply Community</name>
+  </organization>
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Deniz Tas</name>
+      <email>d.tas@dkfz-heidelberg.de</email>
+      <organization>German Cancer Research Center</organization>
+      <organizationUrl>https://www.dkfz.de/en/</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:https://github.com/samply/bbmri-auth-dto.git</connection>
+    <developerConnection>scm:git:https://github.com/samply/bbmri-auth-dto.git</developerConnection>
+    <url>https://github.com/samply/bbmri-auth-dto</url>
+  </scm>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <properties>
+    <version.samply.common.config>5.1.0</version.samply.common.config>
+    <commons-codec.version>1.10</commons-codec.version>
+    <jackson-jaxrs-json-provider.version>2.9.4</jackson-jaxrs-json-provider.version>
+    <nimbus-jose-jwt.version>4.41.2</nimbus-jose-jwt.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>de.samply</groupId>
+      <artifactId>common-config</artifactId>
+      <version>${version.samply.common.config}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.nimbusds</groupId>
+      <artifactId>nimbus-jose-jwt</artifactId>
+      <version>${nimbus-jose-jwt.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>${commons-codec.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <artifactId>jackson-jaxrs-json-provider</artifactId>
+      <version>${jackson-jaxrs-json-provider.version}</version>
+    </dependency>
+  </dependencies>
+
+</project>
