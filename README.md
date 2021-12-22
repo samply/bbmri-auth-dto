@@ -1,5 +1,3 @@
-UNMERGED BRANCH -CHANGES FROM OTHER SAMPLY TEAMS MISSING
-
 # Data Transfer Objects for Perun
 
 This `auth-dto` library defines POJOs that you can be use for the Perun identity provider.
